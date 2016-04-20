@@ -31,7 +31,7 @@ gem 'jbuilder', '~> 2.0'
 # gem 'capistrano-rails', group: :development
 
 gem 'haml-rails'
-gem 'devise'
+gem 'devise', git: 'https://github.com/plataformatec/devise', branch: 'master'
 gem 'bootstrap-sass'
 
 group :development, :test do
