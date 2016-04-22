@@ -23,4 +23,11 @@ RSpec.describe User, :type => :model do
       end
     end
   end
+
+  describe '#full_name' do
+    it 'combines name and last_name' do
+      user = build(:user)
+      expect(user.full_name).to eq(user.name + ' ' + user.last_name)
+    end
+  end
 end

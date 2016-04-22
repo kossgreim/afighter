@@ -3,7 +3,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   before_action :configure_permitted_parameters
 
   def show
-
+    @user = User.find(params[:id])
   end
 
   protected

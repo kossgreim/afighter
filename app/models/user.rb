@@ -6,4 +6,8 @@ class User < ApplicationRecord
 
   validates :name, :last_name, presence: true
   validates :name, :last_name, length: { in: 2..50 }
+
+  def full_name
+    "#{name} #{last_name}"
+  end
 end
