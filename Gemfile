@@ -37,7 +37,11 @@ gem 'bootstrap-sass'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'rspec-rails'
+  gem "rspec-core", :github => "rspec/rspec-core", branch: 'master'
+  gem "rspec-expectations", :github => "rspec/rspec-expectations", branch: 'master'
+  gem "rspec-mocks", :github => "rspec/rspec-mocks", branch: 'master'
+  gem "rspec-support", :github => "rspec/rspec-support", branch: 'master'
+  gem "rspec-rails", :github => "rspec/rspec-rails", branch: 'master'
   gem 'factory_girl_rails'
   gem 'ffaker'
   gem 'capybara'
