@@ -2,6 +2,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   before_action :configure_permitted_parameters
 
+  def show
+
+  end
+
   protected
 
   # my custom fields are :name, :last_name
@@ -14,5 +18,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
       u.permit(:name, :last_name,
         :email, :password, :password_confirmation, :current_password)
     end
+  end
+
+  def after_update_path_for(resource)
+    user_path(resource)
   end
 end
