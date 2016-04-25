@@ -2,9 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "record_types/edit", type: :view do
   before(:each) do
-    @record_type = assign(:record_type, RecordType.create!(
-      :name => "MyString"
-    ))
+    @record_type = assign(:record_type, create(:record_type))
   end
 
   it "renders the edit record_type form" do

@@ -1,10 +1,11 @@
 class RecordTypesController < ApplicationController
   before_action :set_record_type, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /record_types
   # GET /record_types.json
   def index
-    @record_types = RecordType.all
+    @record_types = RecordType.where(user: current_user)
   end
 
   # GET /record_types/1
