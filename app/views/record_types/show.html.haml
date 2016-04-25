@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @record_type.name
+
+= link_to 'Edit', edit_record_type_path(@record_type)
+\|
+= link_to 'Back', record_types_path

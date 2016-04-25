@@ -1,0 +1,21 @@
+%h1 Listing record_types
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th
+      %th
+      %th
+
+  %tbody
+    - @record_types.each do |record_type|
+      %tr
+        %td= record_type.name
+        %td= link_to 'Show', record_type
+        %td= link_to 'Edit', edit_record_type_path(record_type)
+        %td= link_to 'Destroy', record_type, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Record type', new_record_type_path
