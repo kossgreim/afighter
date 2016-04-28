@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :records
   resources :record_types
   root to: 'default#index'
   devise_for :users, controllers: {registrations: "users/registrations", sessions: "users/sessions"}

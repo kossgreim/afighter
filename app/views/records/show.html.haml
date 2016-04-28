@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Record type:
+  = @record.record_type
+%p
+  %b Qt:
+  = @record.qt
+%p
+  %b User:
+  = @record.user
+
+= link_to 'Edit', edit_record_path(@record)
+\|
+= link_to 'Back', records_path

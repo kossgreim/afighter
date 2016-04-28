@@ -30,6 +30,9 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  config.generators do |g|
+    g.test_framework :rspec
+  end
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 

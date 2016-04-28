@@ -7,6 +7,7 @@ class User < ApplicationRecord
   validates :name, :last_name, presence: true
   validates :name, :last_name, length: { in: 2..50 }
   has_many :record_types, dependent: :destroy
+  has_many :records, dependent: :destroy
 
   def full_name
     "#{name} #{last_name}"
